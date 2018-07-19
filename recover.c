@@ -49,6 +49,7 @@ int main(int argc, char *argv[])
             // it is a jpg so check if no jpg exists yet, write buffer and increment jpgcount
             if(jpgcount == 0)
             {
+                sprintf (outfile, "%03i.jpg", jpgcount);
                 img = fopen(outfile, "w");
                 fwrite(buffer, 1, 512, img);
 
