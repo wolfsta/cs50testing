@@ -51,7 +51,6 @@ int main(int argc, char *argv[])
             {
                 img = fopen(outfile, "w");
                 fwrite(buffer, 1, 512, img);
-                jpgcount++;
 
             // else if it is a new jpg but not the first one, close the open file, create a new filename, open it for writing, write the buffer and increment jpgcount
             } else {
