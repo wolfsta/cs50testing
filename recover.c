@@ -31,6 +31,15 @@ int main(int argc, char *argv[])
         // read file to buffer one byte at a time so can see when it reads less than 512bytws at the end
         fread(buffer, 1, 512, infile);
 
+        /* may need  to do it this way
+        if (fread(buffer, 1, 512, infile) != 512)
+        {
+            fclose(img);
+            fclose(infile);
+            break;
+        }
+        */
+
         // check if its a jpg file
         if (buffer[0] == 0xff &&
             buffer[1] == 0xd8 &&
